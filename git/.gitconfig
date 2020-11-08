@@ -1,0 +1,7 @@
+[user]
+	email = tacahs12@gmail.com
+	name = carlosahs
+[credential]
+	helper = manager
+[core]
+	excludesfile = /home/carlosahs/.gitignore
