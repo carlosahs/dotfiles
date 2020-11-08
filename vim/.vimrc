@@ -1,7 +1,7 @@
 " Color palete config
+set termguicolors
 set background=dark
 colorscheme iceberg
-set termguicolors
 
 " General config
 set number
