@@ -1,0 +1,6 @@
+clangd.install
+clangd.update
+coc-definition
+clangd.switchSourceHeader
+python.setLinter
+python.setInterpreter
