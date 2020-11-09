@@ -12,6 +12,10 @@ set autowrite
 set showcmd
 set statusline+=\ %f
 
+" Splitting windows
+map ss :split 
+map sv :vsplit 
+
 " FZF config
 set rtp+=~/.fzf
 
