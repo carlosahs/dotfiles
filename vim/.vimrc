@@ -11,6 +11,7 @@ set laststatus=2
 set autowrite
 set showcmd
 set statusline+=\ %f
+set autowrite
 
 " Splitting windows
 map ss :split 
