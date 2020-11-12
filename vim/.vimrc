@@ -1,6 +1,10 @@
 " Color palete config
-set termguicolors
 set background=dark
+
+if has("termguicolors")
+  set termguicolors
+endif
+
 colorscheme iceberg
 
 " General config
@@ -12,6 +16,17 @@ set autowrite
 set showcmd
 set statusline+=\ %f
 set autowrite
+
+"" stop using the arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 " Splitting windows
 map ss :split 
@@ -31,6 +46,7 @@ autocmd Filetype json setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype bash setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype sql setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " CoC configuration
 " TextEdit might fail if hidden is not set.
