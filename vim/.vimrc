@@ -1,4 +1,4 @@
-" Color palete config
+" Color scheme config
 set background=dark
 
 if has("termguicolors")
@@ -6,6 +6,11 @@ if has("termguicolors")
 endif
 
 colorscheme iceberg
+
+"" lightline color scheme config
+let g:lightline = {
+      \ 'colorscheme': 'iceberg',
+      \ }
 
 " General config
 set number
