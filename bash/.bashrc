@@ -161,3 +161,7 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
 fi
 
 unset env
+
+# vim and nvim
+alias vim="nvim"
+alias vimdiff="nvim -d"
