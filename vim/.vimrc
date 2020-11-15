@@ -7,10 +7,20 @@ endif
 
 colorscheme iceberg
 
-"" lightline color scheme config
+" lightline config
 let g:lightline = {
       \ 'colorscheme': 'iceberg',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status'
+      \ },
       \ }
+
+"" Use auocmd to force lightline update.
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " General config
 set number
@@ -21,6 +31,10 @@ set autowrite
 set showcmd
 set statusline+=\ %f
 set autowrite
+set nuw=6
+
+"" map :wall to :W 
+"[map 
 
 "" stop using the arrow keys
 noremap <Up> <NOP>
@@ -47,6 +61,7 @@ autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype rust setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype java setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype json setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype bash setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype sql setlocal tabstop=2 softtabstop=2 shiftwidth=2
