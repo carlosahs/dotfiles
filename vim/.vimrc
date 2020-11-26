@@ -33,6 +33,9 @@ set statusline+=\ %f
 set autowrite
 set nuw=6
 
+"" Cursor shape 
+let &t_EI = "\<Esc>[2 q"
+
 "" map :wall to :W 
 "[map 
 
@@ -54,8 +57,8 @@ map sv :vsplit
 " FZF config
 set rtp+=~/.fzf
 
-" Tab config per file
-autocmd Filetype cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4
+" Indentation config per file
+autocmd Filetype cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 
 autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype css setlocal tabstop=2 softtabstop=2 shiftwidth=2
