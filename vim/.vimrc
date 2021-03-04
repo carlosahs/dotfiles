@@ -66,6 +66,13 @@ autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype tex setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+" templates
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex 
+  augroup END
+endif
+
 " CoC configuration
 " TextEdit might fail if hidden is not set.
 set hidden
