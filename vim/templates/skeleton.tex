@@ -3,74 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{minted}
 
-\usepackage{listings}
-\usepackage{xcolor}
-
-% syntax highlighting 
-\definecolor{numbers}{RGB}{173, 53, 119}
-\definecolor{identifiers}{RGB}{55, 53, 47}
-\definecolor{keywords}{RGB}{56, 148, 187}
-\definecolor{strings}{RGB}{136, 175, 56}
-\definecolor{comments}{RGB}{150, 161, 172}
-\definecolor{default}{RGB}{150, 150, 150}
-\definecolor{operators}{RGB}{176, 143, 102}
-\definecolor{background}{RGB}{247, 246, 243}
-
-% jub0bs code for highlighting numbers in code block
-% extracted from: https://tex.stackexchange.com/questions/34896/coloring-digits-with-the-listings-package
-\newcommand\digitstyle{\color{numbers}}
-\makeatletter
-\newcommand{\ProcessDigit}[1] {
-  \ifnum\lst@mode=\lst@Pmode\relax%
-    {\digitstyle #1}%
-  \else
-    #1%
-  \fi
-}
-\makeatother
-
-\lstdefinestyle{mystyle}{
-  backgroundcolor = \color{background},
-  commentstyle = \color{comments},
-  keywordstyle = \color{keywords},
-  numberstyle = \tiny\color{numbers},
-  stringstyle = \color{strings},
-  identifierstyle = \color{identifiers},
-  basicstyle = \color{default}\ttfamily\footnotesize,
-  breakatwhitespace = false,
-  breaklines = true,
-  captionpos = b,
-  keepspaces = true,
-  numbers = left,
-  numbersep = 5pt,
-  showspaces = false,
-  showstringspaces = false,
-  showtabs = false,
-  tabsize = 4,
-  literate = {-}{{{\color{operators}-}}}1
-             {+}{{{\color{operators}+}}}1
-             {/}{{{\color{operators}/}}}1
-             {*}{{{\color{operators}*}}}1
-             {\%}{{{\color{operators}\%}}}1
-             {!}{{{\color{operators}!}}}1
-             {=}{{{\color{operators}=}}}1
-             {<}{{{\color{operators}<}}}1
-             {>}{{{\color{operators}>}}}1
-             {0}{{{\ProcessDigit{0}}}}1
-             {1}{{{\ProcessDigit{1}}}}1
-             {2}{{{\ProcessDigit{2}}}}1
-             {3}{{{\ProcessDigit{3}}}}1
-             {4}{{{\ProcessDigit{4}}}}1
-             {5}{{{\ProcessDigit{5}}}}1
-             {6}{{{\ProcessDigit{6}}}}1
-             {7}{{{\ProcessDigit{7}}}}1
-             {8}{{{\ProcessDigit{8}}}}1
-             {9}{{{\ProcessDigit{9}}}}1
-}
-
-%% apply style
-\lstset{style=mystyle}
+% set syntax highlight style
+\usemintedstyle{arduino}
 
 % default graphics path
 \graphicspath{{ images/ }}
