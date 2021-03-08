@@ -8,6 +8,7 @@
     "coc-python": ">=1.2.12",
     "coc-solargraph": ">=1.1.8",
     "coc-sql": ">=0.3.3",
+    "coc-texlab": ">=2.3.0",
     "coc-tsserver": ">=1.6.0"
   }
 }
