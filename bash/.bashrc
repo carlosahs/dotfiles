@@ -124,7 +124,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1="\[\e[36m\]\u \[\e[35m\]\w\[\e[00m\]\$(parse_git_branch)\n🔥 " 
+export PS1="\[\e[36m\]\u \[\e[35m\]\W\[\e[00m\]\$(parse_git_branch)\n🔥 " 
 
 # setup rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
