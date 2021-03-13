@@ -230,3 +230,12 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" tmux + vim configuration
+let g:tmux_nvigator_no_mappings = 1
+
+nnoremap <silent> {c-h} :TmuxNavigateLeft<cr>
+nnoremap <silent> {c-j} :TmuxNavigateDown<cr>
+nnoremap <silent> {c-k} :TmuxNavigateUp<cr>
+nnoremap <silent> {c-l} :TmuxNavigateRight<cr>
+nnoremap <silent> {c-p} :TmuxNavigatePrevious<cr>
