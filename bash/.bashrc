@@ -126,10 +126,6 @@ parse_git_branch() {
 
 export PS1="\[\e[36m\]\u \[\e[35m\]\W\[\e[00m\]\$(parse_git_branch)\n🔥 " 
 
-# setup rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
-
 # setup NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -162,3 +158,22 @@ fi
 
 unset env
 source "$HOME/.cargo/env"
+
+# rbenv configuration
+eval "$(rbenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/carlosahs/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/carlosahs/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/carlosahs/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/carlosahs/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
